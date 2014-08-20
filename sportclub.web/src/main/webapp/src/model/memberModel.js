@@ -32,8 +32,47 @@ define(['model/_memberModel'], function() {
 
  	validate: function(attrs,options){
             var validationMessage = "";
+            var d = attrs.birthDate.split("/");
+            var n = new Date();
             if(!attrs.name){
-                validationMessage = "The name can't be empty.";
+                validationMessage = "The Name can't be empty.";
+            }
+            else if(!attrs.firstName){
+                validationMessage = "The First Name can't be empty";
+            }
+            else if(!attrs.lastName){
+                validationMessage = "The Last Name can't be empty";
+            }
+            else if(!attrs.birthDate){
+                validationMessage = "The Birth Date can't be empty";
+            }
+            else if(!attrs.docNumber){
+                validationMessage = "The Doc Number can't be empty";
+            }
+            else if(!attrs.documenttypeId){
+                validationMessage = "The Document Type ID can't be empty";
+            }
+            else if(!attrs.partnerId){
+                validationMessage = "The Partner ID can't be empty";
+            }
+            else if(attrs.docNumber.lenght<5){
+                validationMessage = "The Doc Number must be at least 5 characters long";
+            }
+            else if(d[0]>=n.getDate() && d[1]>=n.getMonth() && d[2]>=n.getFullYear()){
+                validationMessage = "The date can't be today or in the future";
+            }
+            else if(n.getFullYear()-d[2]>100){
+                validationMessage = "The member can't be 100 years old";
+            }
+            else if(n.getFullYear()-d[2]===100){
+                if(n.getMonth()>d[1]){
+                    validationMessage = "The member can't be 100 years old";
+                }
+                else if(n.getMonth()===d[1]){
+                    if(n.getDate()>=d[0]){
+                        validationMessage = "The member can't be 100 years old";
+                    }
+                }
             }
             if(validationMessage.length>0){
                return validationMessage;
