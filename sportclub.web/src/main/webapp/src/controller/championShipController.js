@@ -32,9 +32,9 @@ define(['controller/_championShipController','delegate/championShipDelegate'], f
         precio: function(params){
             var start = params.startDate.val();
             var end = params.endDate.val();
-                        
+            var tiempo2 = end.getTime() - start.getTime() + 23;            
             var tiempo = end.getTime() - start.getTime(); 
-            var dias = Math.floor(tiempo / (1000 * 60 * 60 * 24));            
+            var dias = Math.floor(tiempo / (1000 * 60 * 60 * 24)) + tiempo2;            
             
             alert('Los dias entre las fechas '+start+' y '+end+'son: '+Math.exp(0,5*dias) );
         },
