@@ -38,7 +38,17 @@ define(['component/_CRUDComponent', 'controller/toolbarController', 'model/toolb
             Backbone.on(self.componentId + '-sport-show-average', function(params) {
                 self.componentController.average(params);
             });
+            
+            this.toolbarModel.set('createName', 'Crear');
+            this.toolbarModel.set('refreshName', 'Refrescar');
+            this.toolbarModel.set('showPrint', false);
+            this.toolbarModel.set('showSearch', false);
+            this.toolbarModel.set('title', 'Deporte');
+            this.addButton({name: "Idioma", icon: "glyphicon-question-sign", }, function() {
+                 self.componentController.language();
+            });
         }
+        
     });
     return App.Component.SportComponent;
 });

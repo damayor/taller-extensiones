@@ -4,14 +4,14 @@
     <table class="table striped">
     <thead>
     <tr>
-		 <th>Age Of Expirience</th>
-		 <th>Name</th>
-		 <th>First Name</th>
-		 <th>Last Name</th>
-		 <th>Birth Date</th>
-		 <th>Enable</th>
-		 <th>Doc Number</th>
-    <th>Actions</th>
+		 <th>A&ntildeos de Experiencia</th>
+		 <th>Nombre Completo</th>
+		 <th>Nombre</th>
+		 <th>Apellido</th>
+		 <th>Fecha de Nacimiento</th>
+		 <th>Permitido</th>
+		 <th>Numero Doc</th>
+    <th>Acciones</th>
     </tr>
     </thead>
     <tbody>
@@ -28,10 +28,10 @@
 
     <td>
     <% if(showEdit) {%>
-    <a onclick="Backbone.trigger('<%= componentId %>-referee-edit',{id:<%= referee.id %>}); return false" >Edit</a> |
+    <a onclick="Backbone.trigger('<%= componentId %>-referee-edit',{id:<%= referee.id %>}); return false" >Editar</a> |
 	<% } %> 
 	<% if(showDelete) {%>
-    <a onclick="Backbone.trigger('<%= componentId %>-referee-delete',{id:<%= referee.id %>}); return false" >Delete</a> 
+    <a onclick="Backbone.trigger('<%= componentId %>-referee-delete',{id:<%= referee.id %>}); return false" >Eliminar</a> 
 	<% } %>    
 	</td>
     </tr>

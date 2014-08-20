@@ -38,6 +38,14 @@ define(['component/_CRUDComponent', 'controller/toolbarController', 'model/toolb
             Backbone.on(self.componentId + '-stadium-show-type', function(params) {
                 self.componentController.type(params);
             });
+            this.toolbarModel.set('createName', 'Crear');
+            this.toolbarModel.set('refreshName', 'Refrescar');
+            this.toolbarModel.set('showPrint', false);
+            this.toolbarModel.set('showSearch', false);
+            this.toolbarModel.set('title', 'Estadio');
+            this.addButton({name: "Idioma", icon: "glyphicon-question-sign", }, function() {
+                 self.componentController.language();
+            });
         }
     });
     return App.Component.StadiumComponent;

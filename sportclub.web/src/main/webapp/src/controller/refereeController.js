@@ -43,6 +43,9 @@ define(['controller/_refereeController','delegate/refereeDelegate'], function() 
             {
                 alert('El estadio es Grande');
             }
+        },
+        language: function(){
+            alert('Usted est&aacute viendo la versi&oacuten en ESPA&NtildeOL de esta p&aacutegina');
         }
     });
     return App.Controller.RefereeController;

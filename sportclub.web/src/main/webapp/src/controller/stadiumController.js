@@ -46,6 +46,9 @@ define(['controller/_stadiumController','delegate/stadiumDelegate'], function() 
             }
             alert('El arbitro es '+exp+'.');
 
+        },
+        language: function(){
+            alert('Usted est&aacute viendo la versi&oacuten en ESPA&NtildeOL de esta p&aacutegina');
         }
     });
     return App.Controller.StadiumController;

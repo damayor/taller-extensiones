@@ -56,9 +56,7 @@ define(['model/countryModel'], function(countryModel) {
                 Backbone.trigger(this.componentId + '-' + 'post-country-create', {view: this});
             }
         },
-        language: function(){
-            alert('Usted está viendo la versión en ESPAÑOL de esta página');
-        },
+        
         list: function(params) {
             if (params) {
                 var data = params.data;

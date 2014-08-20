@@ -32,6 +32,9 @@ define(['controller/_championShipController','delegate/championShipDelegate'], f
         precio: function(params){
             var avg = ((parseInt(params.maxAge) + parseInt(params.minAge)) / 2);
             alert('El promedio de edad del deporte '+params.name+'es: ' + avg);
+        },
+        language: function(){
+            alert('Usted est&aacute viendo la versi&oacuten en ESPA&NtildeOL de esta p&aacutegina');
         }
     });
     return App.Controller.ChampionShipController;

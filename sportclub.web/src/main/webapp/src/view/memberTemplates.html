@@ -4,15 +4,15 @@
     <table class="table striped">
     <thead>
     <tr>
-		 <th>Name</th>
-		 <th>First Name</th>
-		 <th>Last Name</th>
-		 <th>Birth Date</th>
-		 <th>Enable</th>
-		 <th>Doc Number</th>
-		 <th>Documenttype Id</th>
-		 <th>Partner Id</th>
-    <th>Actions</th>
+		 <th>Nombre Completo</th>
+		 <th>Nombre</th>
+		 <th>Apellido</th>
+		 <th>Fecha de Nacimiento</th>
+		 <th>Permitido</th>
+		 <th>Numero Doc</th>
+		 <th>Id Tipo Doc</th>
+		 <th>Id Pareja</th>
+    <th>Acciones</th>
     </tr>
     </thead>
     <tbody>
@@ -28,10 +28,10 @@
 		<td><%= htmlEncode(member.getDisplay('partnerId')) %></td>
     <td>
     <% if(showEdit) {%>
-    <a onclick="Backbone.trigger('<%= componentId %>-member-edit',{id:<%= member.id %>}); return false" >Edit</a> |
+    <a onclick="Backbone.trigger('<%= componentId %>-member-edit',{id:<%= member.id %>}); return false" >Editar</a> |
 	<% } %> 
 	<% if(showDelete) {%>
-    <a onclick="Backbone.trigger('<%= componentId %>-member-delete',{id:<%= member.id %>}); return false" >Delete</a> 
+    <a onclick="Backbone.trigger('<%= componentId %>-member-delete',{id:<%= member.id %>}); return false" >Eliminar</a> 
 	<% } %>    
 	</td>
     </tr>
