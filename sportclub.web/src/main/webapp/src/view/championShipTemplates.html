@@ -7,7 +7,6 @@
 		 <th>Nombre</th>
 		 <th>Fecha Inicio</th>
 		 <th>Fecha Final</th>
-                    <td><a onclick="Backbone.trigger('<%= componentId %>-champion-days-costo',{Start Date:<%= htmlEncode(sport.getDisplay('Start Date')) %>,End Date:<%= htmlEncode(sport.getDisplay('End Date')) %>}); return false;" >Ver Costo</a></td>
 
                  
     <th>Acciones</th>
@@ -19,6 +18,8 @@
 		<td><%= htmlEncode(championShip.getDisplay('name')) %></td>
 		<td><%= htmlEncode(championShip.getDisplay('startDate')) %></td>
 		<td><%= htmlEncode(championShip.getDisplay('endDate')) %></td>
+                    <td><a onclick="Backbone.trigger('<%= componentId %>-champion-days-costo',{startDate:<%= htmlEncode(championShip.getDisplay('startDate')) %>,endDate:<%= htmlEncode(championShip.getDisplay('endDate')) %>}); return false;" >Ver Costo</a></td>
+
     <td>
     <% if(showEdit) {%>
     <a onclick="Backbone.trigger('<%= componentId %>-championShip-edit',{id:<%= championShip.id %>}); return false" >Editar</a> |
